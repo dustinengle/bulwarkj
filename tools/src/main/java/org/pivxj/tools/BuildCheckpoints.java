@@ -108,7 +108,7 @@ public class BuildCheckpoints {
                 return;
             }InetAddress.getLocalHost();
         } else {
-            ipAddress = InetAddress.getByName("202.5.21.31"); // InetAddress.getLocalHost();
+            ipAddress = InetAddress.getByName("45.72.247.193"); // InetAddress.getLocalHost();
         }
         final PeerAddress peerAddress = new PeerAddress(ipAddress, params.getPort());
 
@@ -136,7 +136,7 @@ public class BuildCheckpoints {
             public void notifyNewBestBlock(StoredBlock block) throws VerificationException {
                 int height = block.getHeight();
                 System.out.println("block height: "+block.getHeight());
-                if (height % CoinDefinition.getIntervalCheckpoints() == 0 && block.getHeader().getTimeSeconds() <= timeAgo) {
+                if (height /* % CoinDefinition.getIntervalCheckpoints() */ == 65105 /* && block.getHeader().getTimeSeconds() <= timeAgo */) {
                 //if(height == 201500){
                     System.out.println(String.format("Checkpointing block %s at height %d, time %s",
                             block.getHeader().getHash(), block.getHeight(), Utils.dateTimeFormat(block.getHeader().getTime())));

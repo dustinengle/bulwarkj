@@ -22,7 +22,7 @@ import com.google.common.base.*;
 import com.google.common.collect.*;
 import org.pivxj.script.*;
 import org.slf4j.*;
-import com.hashengineering.crypto.Hash9;
+import com.hashengineering.crypto.Nist5;
 import javax.annotation.*;
 import java.io.*;
 import java.math.*;
@@ -135,7 +135,7 @@ public class Block extends Message {
         super(params);
         // Set up a few basic things. We are not complete after this though.
         version = setVersion;
-        difficultyTarget = 0x1e0ffff0L;
+        difficultyTarget = 0x1e0fffffL;
         time = System.currentTimeMillis() / 1000;
         prevBlockHash = Sha256Hash.ZERO_HASH;
 
@@ -311,7 +311,7 @@ public class Block extends Message {
 
                 //hash = Sha256Hash.wrapReversed(Sha256Hash.hashTwice(payload, offset, cursor - offset));
             } else {
-                hash = Sha256Hash.wrapReversed(Hash9.digest(payload, offset, cursor - offset));
+                hash = Sha256Hash.wrapReversed(Nist5.nist5Digest(payload, offset, cursor - offset));
                 //System.out.println("hash parsed: "+hash.toString());
             }
 
@@ -487,7 +487,7 @@ public class Block extends Message {
                             isZerocoin()?
                                     Sha256Hash.hashTwice(bos.toByteArray())
                                     :
-                                    Hash9.digest(bos.toByteArray())
+                                    Nist5.nist5Digest(bos.toByteArray())
                             )
                     );
         } catch (IOException e) {

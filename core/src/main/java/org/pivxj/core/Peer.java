@@ -1105,6 +1105,8 @@ public class Peer extends PeerSocketHandler {
                         final Block orphanRoot = checkNotNull(blockChain.getOrphanRoot(m.getHash()));
                         blockChainDownloadLocked(orphanRoot.getHash());
                     } else {
+						final Block orphanRoot = checkNotNull(blockChain.getOrphanRoot(m.getHash()));
+                        blockChainDownloadLocked(orphanRoot.getHash());
                         log.info("Did not start chain download on solved block due to in-flight header download.");
                     }
                 } finally {

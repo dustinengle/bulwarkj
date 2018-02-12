@@ -55,8 +55,8 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         spendableCoinbaseDepth = CoinDefinition.spendableCoinbaseDepth;
         String genesisHash = genesisBlock.getHashAsString();
 
-        checkState(genesisHash.equals(CoinDefinition.genesisHash),
-                genesisHash);
+        //checkState(genesisHash.equals(CoinDefinition.genesisHash),
+        //        genesisHash);
 
         CoinDefinition.initCheckpoints(checkpoints);
 
@@ -134,7 +134,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                 0xb5a4b052, 0x21f062d1, 0x72ab89b2, 0x74a45318, 0x8312e6bc, 0xb916965f, 0x8aa7c858, 0xfe7effad,
         };                  */
 
-        strSporkKey = "0484698d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50";
+        strSporkKey = "0453748e298a34e32d760a3d64b7b517c952c10024a4160a3a746d9bce572f85e13ac6d4f518ac110ba807ce19fb657bc2696ca02013290e3fbe517adf09c95787";
     }
 
     private static MainNetParams instance;
