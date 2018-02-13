@@ -16,7 +16,7 @@ public class CoinDefinition {
     public static final String coinTicker = "BULWARK";
     public static final String coinURIScheme = "bulwark";
     public static final String cryptsyMarketId = "155";
-    public static final String cryptsyMarketCurrency = "PIV";
+    public static final String cryptsyMarketCurrency = "BWK";
     public static final String PATTERN_PRIVATE_KEY_START_UNCOMPRESSED = "[7]";
     public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[X]";
 
