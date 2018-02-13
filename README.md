@@ -1,6 +1,6 @@
-### Welcome to pivxj
+### Welcome to bulwarkj
 
-The pivxj library is a Java implementation of the PIVX protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of PIVX Core. It comes with full documentation and some example apps showing how to use it.
+The bulwarkj library is a Java implementation of the BULWARK protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of BULWARK Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
@@ -37,13 +37,13 @@ These are found in the `examples` module.
 
 #### Forwarding service
 
-This will download the block chain and eventually print a PIVX address that it has generated.
+This will download the block chain and eventually print a BULWARK address that it has generated.
 
 If you send coins to that address, it will forward them on to the address you specified.
 
 ```
   cd examples
-  mvn exec:java -Dexec.mainClass=org.pivxj.examples.ForwardingService -Dexec.args="<insert a pivx address here>"
+  mvn exec:java -Dexec.mainClass=org.bulwarkj.examples.ForwardingService -Dexec.args="<insert a bulwark address here>"
 
 ```
 

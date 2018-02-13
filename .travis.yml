@@ -17,5 +17,5 @@ after_success:
 
 notifications:
   irc:
-    channels: "irc.freenode.net#pivxj"
+    channels: "irc.freenode.net#bulwarkj"
     skip_join: true

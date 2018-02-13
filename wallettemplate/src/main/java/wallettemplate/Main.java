@@ -16,12 +16,12 @@ package wallettemplate;
 
 import com.google.common.util.concurrent.*;
 import javafx.scene.input.*;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.*;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.DeterministicSeed;
+import org.bulwarkj.core.NetworkParameters;
+import org.bulwarkj.kits.WalletAppKit;
+import org.bulwarkj.params.*;
+import org.bulwarkj.utils.BriefLogFormatter;
+import org.bulwarkj.utils.Threading;
+import org.bulwarkj.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -98,7 +98,7 @@ public class Main extends Application {
 
         // Make log output concise.
         BriefLogFormatter.init();
-        // Tell pivxj to run event handlers on the JavaFX UI thread. This keeps things simple and means
+        // Tell bulwarkj to run event handlers on the JavaFX UI thread. This keeps things simple and means
         // we cannot forget to switch threads when adding event handlers. Unfortunately, the DownloadListener
         // we give to the app kit is currently an exception and runs on a library thread. It'll get fixed in
         // a future version.

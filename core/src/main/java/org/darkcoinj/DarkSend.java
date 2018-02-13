@@ -1,7 +1,7 @@
 package org.darkcoinj;
 
-import org.pivxj.core.DarkSendQueue;
-import org.pivxj.core.Sha256Hash;
+import org.bulwarkj.core.DarkSendQueue;
+import org.bulwarkj.core.Sha256Hash;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
