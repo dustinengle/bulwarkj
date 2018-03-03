@@ -548,9 +548,14 @@ public class Peer extends PeerSocketHandler {
             processUTXOMessage((UTXOsMessage) m);
         } else if (m instanceof RejectMessage) {
             log.error("{} {}: Received {}", this, getPeerVersionMessage().subVer, m);
-        } else if(m instanceof DarkSendQueue) {
+        } 
+		else if(m instanceof DarkSendQueue) {
             //do nothing
-        } else if(m instanceof MasternodeBroadcast) {
+        } 
+		else if(m instanceof DarkSendElectionEntryPingMessage) {
+            // also do nothing :)
+        }
+		else if(m instanceof MasternodeBroadcast) {
             if(!context.isLiteMode()) {
                 //todo: process master nodes messages
                 //context.masternodeManager.processMasternodeBroadcast((MasternodeBroadcast) m);
