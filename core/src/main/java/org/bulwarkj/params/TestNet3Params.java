@@ -59,8 +59,8 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         subsidyDecreaseBlockCount = CoinDefinition.subsidyDecreaseBlockCount;
         String genesisHash = genesisBlock.getHashAsString();
 
-        if(CoinDefinition.supportsTestNet)
-            checkState(genesisHash.equals(CoinDefinition.testnetGenesisHash));
+        //if(CoinDefinition.supportsTestNet)
+            //checkState(genesisHash.equals(CoinDefinition.testnetGenesisHash));
         //todo: add alert signing key..
         //alertSigningKey = HEX.decode(CoinDefinition.TESTNET_SATOSHI_KEY);
 
