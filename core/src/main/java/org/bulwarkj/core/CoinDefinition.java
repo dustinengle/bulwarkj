@@ -79,7 +79,7 @@ public class CoinDefinition {
     //
     // BULWARK 0.12
     //
-    public static final int PROTOCOL_VERSION = 70811;          //version.h PROTOCOL_VERSION
+    public static final int PROTOCOL_VERSION = 70820;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70811;        //version.h MIN_PROTO_VERSION
 
     public static final int BLOCK_CURRENTVERSION = 2;   //CBlock::CURRENT_VERSION
