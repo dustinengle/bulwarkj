@@ -136,7 +136,7 @@ public class BuildCheckpoints {
             public void notifyNewBestBlock(StoredBlock block) throws VerificationException {
                 int height = block.getHeight();
                 System.out.println("block height: "+block.getHeight());
-                if (height /* % CoinDefinition.getIntervalCheckpoints() */ == 78105 /* && block.getHeader().getTimeSeconds() <= timeAgo */) {
+                if (height /* % CoinDefinition.getIntervalCheckpoints() */ == 117518 /* && block.getHeader().getTimeSeconds() <= timeAgo */) {
                 //if(height == 201500){
                     System.out.println(String.format("Checkpointing block %s at height %d, time %s",
                             block.getHeader().getHash(), block.getHeight(), Utils.dateTimeFormat(block.getHeader().getTime())));
